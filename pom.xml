@@ -10,6 +10,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>mqtt-broker</module>
+        <module>mqtt-broker-deployment</module>
+        <module>mqtt-broker-starter</module>
     </modules>
 
     <properties>
@@ -20,22 +22,25 @@
         <!-- dependency -->
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <embedded-kafka.version>0.0.2</embedded-kafka.version>
-        <embedded-pulsar.version>0.0.2</embedded-pulsar.version>
+        <embedded-pulsar.version>0.0.5</embedded-pulsar.version>
         <guava.version>31.1-jre</guava.version>
-        <jackson.version>2.14.1</jackson.version>
-        <junit.version>5.9.2</junit.version>
-        <kafka.version>3.1.1</kafka.version>
-        <log4j.version>2.19.0</log4j.version>
-        <mockito.version>4.11.0</mockito.version>
+        <jackson.version>2.15.0</jackson.version>
+        <jcommand.version>1.82</jcommand.version>
+        <junit.version>5.9.3</junit.version>
+        <kafka.version>3.4.0</kafka.version>
+        <log4j.version>2.20.0</log4j.version>
+        <mockito.version>5.3.1</mockito.version>
         <mqtt-client.version>1.2.5</mqtt-client.version>
-        <netty.version>4.1.87.Final</netty.version>
+        <netty.version>4.1.92.Final</netty.version>
         <pulsar.version>2.10.0</pulsar.version>
-        <slf4j.version>2.0.6</slf4j.version>
+        <slf4j.version>2.0.7</slf4j.version>
         <!-- plugin -->
+        <assembly-plugin.version>3.5.0</assembly-plugin.version>
         <compiler-plugin.version>3.10.1</compiler-plugin.version>
         <checkstyle-plugin.version>3.2.0</checkstyle-plugin.version>
-        <lombok.version>1.18.24</lombok.version>
-        <puppycrawl.version>10.3.3</puppycrawl.version>
+        <dependency-plugin.version>3.5.0</dependency-plugin.version>
+        <lombok.version>1.18.26</lombok.version>
+        <puppycrawl.version>10.10.0</puppycrawl.version>
         <spotbugs-maven-plugin.version>4.7.2.0</spotbugs-maven-plugin.version>
     </properties>
 
@@ -179,7 +184,7 @@
                     <dependency>
                         <groupId>org.apache.maven.scm</groupId>
                         <artifactId>maven-scm-provider-gitexe</artifactId>
-                        <version>1.13.0</version>
+                        <version>2.0.0</version>
                     </dependency>
                 </dependencies>
             </plugin>
