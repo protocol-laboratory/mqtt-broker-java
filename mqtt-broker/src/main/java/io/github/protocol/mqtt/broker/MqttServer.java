@@ -1,6 +1,7 @@
 package io.github.protocol.mqtt.broker;
 
 import io.github.protocol.mqtt.broker.processor.KafkaProcessor;
+import io.github.protocol.mqtt.broker.processor.MemoryProcessor;
 import io.github.protocol.mqtt.broker.processor.MqttProcessor;
 import io.github.protocol.mqtt.broker.processor.PulsarProcessor;
 import io.github.protocol.mqtt.broker.util.EventLoopUtil;
@@ -73,6 +74,7 @@ public class MqttServer {
     private MqttProcessor processor(MqttServerConfig config) {
         return switch (config.getProcessorType()) {
             case KAFKA -> new KafkaProcessor(config.getMqttAuth(), config.getKafkaProcessorConfig());
+            case MEMORY -> new MemoryProcessor(config.getMqttAuth(), config.getMemoryProcessorConfig());
             case PULSAR -> new PulsarProcessor(config.getMqttAuth(), config.getPulsarProcessorConfig());
         };
     }

@@ -125,4 +125,3 @@ public class MqttHandler extends ChannelInboundHandlerAdapter {
         processor.processDisconnect(ctx);
     }
 }
-
